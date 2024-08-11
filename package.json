@@ -1,7 +1,7 @@
 {
   "name": "2048",
   "private": true,
-  "version": "0.1.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -37,6 +37,8 @@
     "@ollyrowe/core": "^1.1.0"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@types/jest": "^29.5.11",
     "eslint": "^8.55.0",
