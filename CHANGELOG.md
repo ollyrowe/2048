@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/ollyrowe/2048/compare/v1.0.1...v1.0.2) (2024-08-11)
+
+
+### Bug Fixes
+
+* update vite config to set base url ([1131395](https://github.com/ollyrowe/2048/commit/113139542cbf071d359192ed559a0ba6251fa9ab))
+
 ## [1.0.1](https://github.com/ollyrowe/2048/compare/v1.0.0...v1.0.1) (2024-08-11)
 
 
