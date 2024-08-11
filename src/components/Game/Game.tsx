@@ -318,11 +318,11 @@ export class Game extends Component {
 
   private createNewTile() {
     // 75% chance of a 2, 25% chance of a 4
-    const value = random() < 0.75 ? 2 : 4;
+    const value = Math.random() < 0.75 ? 2 : 4;
 
     const location: Location = {
-      x: Math.floor(random() * 4) + 1,
-      y: Math.floor(random() * 4) + 1,
+      x: Math.floor(Math.random() * 4) + 1,
+      y: Math.floor(Math.random() * 4) + 1,
     };
 
     // Check if there is already a tile at this location
@@ -352,13 +352,6 @@ export class Game extends Component {
 
     localStorage.setItem(Game.HIGH_SCORE_LS_KEY, this.highScore.toString());
   }
-}
-
-let seed = 5;
-
-function random() {
-  var x = Math.sin(seed++) * 10000;
-  return x - Math.floor(x);
 }
 
 const isSameLocation = (firstLocation: Location, secondLocation: Location) => {
