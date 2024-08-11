@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/ollyrowe/2048/compare/v1.0.2...v1.0.3) (2024-08-11)
+
+
+### Bug Fixes
+
+* add eslint configs ([3e36f4c](https://github.com/ollyrowe/2048/commit/3e36f4cc2c86935544fdae3d80c07a53f88322d1))
+
 ## [1.0.2](https://github.com/ollyrowe/2048/compare/v1.0.1...v1.0.2) (2024-08-11)
 
 
