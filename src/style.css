@@ -1,0 +1,41 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  overscroll-behavior: contain;
+  font-family: sans-serif;
+  background-color: var(--background-colour);
+}
+
+#app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+:root {
+  --title-text-size: 5.4em;
+  --tile-margin: 10px;
+  --tile-border-radius: 8px;
+  --tile-text-size: xxx-large;
+  --animation-speed: 0.16s;
+  --background-colour: #f7f7ef;
+  --overlay-colour: #bbada066;
+  --surface-colour: #bbada0;
+  --text-colour: #776e65;
+  --text-colour-light: #f9f6f2;
+  --placeholder-colour: #d7cec4;
+}
+
+@media screen and (max-width: 479px) {
+  :root {
+    --title-text-size: 3.4em;
+    --tile-margin: 5px;
+    --tile-border-radius: 6px;
+    --tile-text-size: xx-large;
+  }
+}

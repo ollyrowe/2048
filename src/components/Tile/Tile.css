@@ -1,0 +1,69 @@
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+  }
+
+  70% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: translateX(1);
+  }
+}
+
+.tile {
+  animation-name: zoomIn;
+  animation-duration: var(--animation-speed);
+  position: absolute;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(25% - var(--tile-margin));
+  height: calc(25% - var(--tile-margin));
+  left: 0px;
+  right: 0px;
+  border-radius: var(--tile-border-radius);
+  font-size: var(--tile-text-size);
+  font-weight: bold;
+  color: var(--text-colour);
+  transition: left var(--animation-speed), top var(--animation-speed),
+    transform var(--animation-speed);
+}
+
+.merged {
+  transform: scale(1.1);
+}
+
+.column-1 {
+  left: 0px !important;
+}
+
+.column-2 {
+  left: calc(25% + calc(var(--tile-margin) / 3)) !important;
+}
+
+.column-3 {
+  left: calc(50% + calc(var(--tile-margin) / 3) * 2) !important;
+}
+
+.column-4 {
+  left: calc(75% + calc(var(--tile-margin) / 3) * 3) !important;
+}
+
+.row-1 {
+  top: 0px !important;
+}
+
+.row-2 {
+  top: calc(25% + calc(var(--tile-margin) / 3)) !important;
+}
+
+.row-3 {
+  top: calc(50% + calc(var(--tile-margin) / 3) * 2) !important;
+}
+
+.row-4 {
+  top: calc(75% + calc(var(--tile-margin) / 3) * 3) !important;
+}

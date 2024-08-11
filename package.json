@@ -1,0 +1,71 @@
+{
+  "name": "2048",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:tsc": "tsc --watch --noEmit",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "jest --watchAll"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      [
+        "@semantic-release/changelog",
+        {
+          "changelogFile": "CHANGELOG.md"
+        }
+      ],
+      "@semantic-release/npm",
+      "@semantic-release/github",
+      [
+        "@semantic-release/git",
+        {
+          "message": "chore(release): bump version to v${nextRelease.version}"
+        }
+      ]
+    ]
+  },
+  "dependencies": {
+    "@ollyrowe/core": "^1.1.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@types/jest": "^29.5.11",
+    "eslint": "^8.55.0",
+    "jest-environment-jsdom": "^29.3.1",
+    "jest-transform-stub": "^2.0.0",
+    "prettier": "^2.8.3",
+    "ts-jest": "^29.0.5",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8"
+  },
+  "jest": {
+    "verbose": true,
+    "roots": [
+      "<rootDir>/src"
+    ],
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "setupFilesAfterEnv": [
+      "@testing-library/jest-dom/extend-expect"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "testEnvironment": "jsdom"
+  }
+}

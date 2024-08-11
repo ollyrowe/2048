@@ -1,0 +1,39 @@
+name: Deploy
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16.x
+
+      - name: Configure NPM
+        run: |
+          npm config set //npm.pkg.github.com/:_authToken ${{ secrets.RELEASE_TOKEN }}
+          npm config set @ollyrowe:registry https://npm.pkg.github.com
+
+      - name: Install & Build Application
+        run: |
+          npm install
+          npm run build
+
+      - name: Configure 404 Fallback File
+        run: |
+          cd dist
+          cp index.html 404.html
+
+      - name: "Deploy to GitHub Pages"
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: gh-pages
+          folder: dist
