@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/ollyrowe/2048/compare/v1.0.3...v1.1.0) (2024-09-11)
+
+
+### Features
+
+* update icons and add manifest ([c68c9e0](https://github.com/ollyrowe/2048/commit/c68c9e053ee8f9bb0053706c1770522aeedcac57))
+
 ## [1.0.3](https://github.com/ollyrowe/2048/compare/v1.0.2...v1.0.3) (2024-08-11)
 
 
