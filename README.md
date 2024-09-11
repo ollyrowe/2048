@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://ollyrowe.github.io/2048/"><img src="https://raw.githubusercontent.com/ollyrowe/2048/master/public/logo.png" alt="2048" width="300"></a>
+  <a href="https://ollyrowe.github.io/2048/"><img src="https://raw.githubusercontent.com/ollyrowe/2048/master/public/logo.png" alt="2048" width="200"></a>
 </h1>
 
 <h4 align="center">The number game!</h4>
